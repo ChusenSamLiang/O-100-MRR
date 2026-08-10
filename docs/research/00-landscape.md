@@ -80,6 +80,22 @@ orchestration. Often scores better on maintenance load than the elaborate setups
 — a genuinely useful finding for the content angle.
 ([aitechin](https://aitechin.substack.com/p/your-2026-ai-toolkit-20-tools-to))
 
+### G. The Org Layer *(added from intake — not found in public sources)*
+Context scoped for a **company**, not a person: a global directory applied across
+all teams plus team-specific directories per squad, carrying OKRs, strategy,
+product docs — and sometimes method (how to evaluate an idea, how to coach) on
+top of facts.
+
+This archetype is absent from every public setup reviewed, which is itself the
+finding. Published setups are overwhelmingly individual; the shared-context
+problem is harder and nobody films it. It also fails differently: single-vendor
+concentration is a personal annoyance for an individual and a business-continuity
+gap for six squads.
+
+Worth treating as a first-class category — it's the archetype with budget behind
+it, and it's the on-ramp to the team edition in `docs/product/next-steps.md`.
+See `docs/setups/sam-pm-ai-healthcare.md`.
+
 ## What almost nobody has (the content gap)
 
 Across everything reviewed, two layers are consistently **missing** from

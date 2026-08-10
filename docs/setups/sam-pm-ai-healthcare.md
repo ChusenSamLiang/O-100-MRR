@@ -3,90 +3,146 @@ slug: sam-pm-ai-healthcare
 name: "Sam"
 role: "Product Manager"
 industry: "AI Healthcare"
-archetype: ""
+archetype: "Org Layer"
 rubric_version: "0.1"
-scored_on: ""
+scored_on: "2026-08-10"
 scored_by: "self"
+status: "partial — Q12-19 outstanding"
 scores:
-  context_depth: null
-  portability: null
-  interoperability: null
-  automation: null
-  access_surface: null
-  reliability: null
-  governance: null
+  context_depth: 3
+  portability: 0
+  interoperability: 2       # PROVISIONAL — pending Q12
+  automation: 2
+  access_surface: 1
+  reliability: null         # pending Q13-14
+  governance: null          # pending Q15-17
 upkeep:
-  maintenance_load: ""
-  time_to_value: ""
+  maintenance_load: ""      # pending Q18
+  time_to_value: ""         # pending Q19
   monthly_cost_usd: null
 source: "self"
 consent: "public"
 ---
 
-# Sam — PM, AI Healthcare  *(SCAFFOLD — needs your input)*
+# Sam — PM, AI Healthcare
 
-This is entry #1 and the anchor of the directory. It's left blank rather than
-guessed at, because a fabricated founding entry would poison every score that
-gets compared to it.
+## The one-line version
+> Org-grade context — OKRs, strategy, product docs, and a coaching layer, scoped
+> global-plus-squad — running single-vendor on a single laptop.
 
-## Intake — answer these and this file writes itself
+## Layer 1 — Context
+The strongest layer by a distance, and unusual in that it isn't personal context
+at all — it's organizational.
 
-**Layer 1 — Context**
-1. What context files do you actually have? Paths and rough contents.
-2. Are they scoped (global / per-project / personal-uncommitted), or is it one file?
-3. Do any of your PRDs, specs, or strategy docs feed the system — or does it only
-   see whatever you paste in that session?
-4. Does anything update those files automatically, or is it all by hand?
+Contents: OKRs, company strategy, product and service descriptions, plus a
+**coaching arm** that helps the team evaluate ideas and coach each other. That
+last part is rarer than it sounds: most context files carry *facts*, this one
+also carries *method*.
 
-**Layer 2 — Models**
-5. Which providers, and do you pay per-token or per-seat?
-6. When you pick a model, what drives it — habit, cost, or task type?
-7. If your primary went down tomorrow morning, what would you actually do?
+Structure: a global directory applied across all teams, plus team-specific
+directories per product squad. Real scope separation, not one flat file.
 
-**Layer 3 — Harness**
-8. What do you spend the most hours in? (Claude Code, ChatGPT, Cursor, Notion AI, n8n…)
-9. Anything custom — scripts, commands, skills, subagents?
+Strategy docs, PRDs, and product data all feed the system rather than being
+pasted per session.
 
-**Layer 4 — Surface**
-10. Where do you start work from besides your laptop?
-11. Voice anywhere in the loop, or all typed?
+Gap: all maintenance is manual. Stated goal is to automate it.
 
-**Layer 5 — Memory & Output**
-12. Where do outputs land, and would you find one from three weeks ago in under a minute?
+## Layer 2 — Models
+100% Claude. No second provider configured.
 
-**Reliability**
-13. Name one check that catches a bad output before it reaches a colleague.
-14. Have you ever compared two models on the *same* real task and kept the result?
+Model selection within Claude is left to the end user — no default, no
+recommendation. Worth noting this is *delegation*, not routing: nothing decides
+based on task type, so two squads running the same workflow can get different
+quality and there's no way to attribute a bad output to a model choice.
 
-**Governance — the one that matters most in your job**
-15. What's the rule for PHI/PII and patient data? Written down, or held in your head?
-16. Which providers are approved by your company vs. which are personal?
-17. Do you know your monthly spend within $20?
+Continuity plan for a primary-provider outage: none. ("Wait for Claude to come
+back on.")
 
-**Upkeep**
-18. Hours per week keeping this running?
-19. If a new PM joined and you handed them your setup, how long until it worked for them?
+## Layer 3 — Harness
+Entirely the Claude ecosystem — Claude Code, Claude Design. 30–40% of non-meeting
+time, likely more.
 
-## Why your entry is the strategically important one
+Custom work: a substantial library of **skills** for specific report automations
+and research. No subagent setup yet.
 
-Two reasons worth being deliberate about:
+## Layer 4 — Surface
+Mainly laptop. No voice in use, though it's available in the Claude app
+interface — capability present, unadopted.
 
-**Governance is your moat.** Every tech creator can film a router config. Almost
-none of them can speak credibly about what happens when the data in the prompt is
-regulated. Question 15 is the one that makes this channel different from the other
-thousand AI-setup accounts — a PM at an AI healthcare company scoring setups on
-data boundaries is a genuinely defensible position.
+## Layer 5 — Memory & Output
+*Pending Q12.*
 
-**Score yourself honestly and publicly.** If entry #1 is a 92, the rubric reads as
-a vanity instrument and nobody submits. If entry #1 is a 64 with the weak spots
-named out loud, the rubric reads as a real tool and the directory gets
-submissions. The "I built the rubric and then failed my own rubric" video is a
-better first episode than any polished setup tour, and it establishes the
-evidence standard for everyone who comes after.
+## Score — PARTIAL
+
+**4.5 of 7 dimensions evidenced. Reliability and Governance outstanding.**
+
+| Dimension | L | Pts | Evidence |
+|---|---|---|---|
+| Context Depth | 3 | 15.0 | Layered global + per-squad directories; strategy/OKR/product docs feed in; includes method not just facts. Not L4 — no self-maintenance, updates are manual. |
+| Portability | 0 | 0.0 | Single vendor, single account, no alternative configured, no exercised fallback. Textbook L0 anchor. |
+| Interoperability | 2* | 7.5 | Common format across a coherent ecosystem; docs move without transformation. No MCP/API/automation bridge to outside tools evidenced. **Provisional pending Q12.** |
+| Automation Leverage | 2 | 7.5 | A real library of skills — named reusable units where one invocation does many steps. All hand-fired; no triggers, cron, or hooks; no subagents. |
+| Access Surface | 1 | 2.5 | Laptop-primary. Voice available but unused. Capability ≠ adoption. |
+| Reliability & Evaluation | — | — | Pending Q13–14 |
+| Governance & Cost Control | — | — | Pending Q15–17 |
+
+**Running total: 32.5 of 75 points available so far.**
+
+- **Context 75** · **Flexibility 25** · **Scalability TBD**
+
+### The ceiling
+
+The 25 remaining points sit in Reliability (15) and Governance (10). Even at a
+perfect L4 on both, the final score lands at **57.5**.
+
+So the outcome is already determined in one respect: **this setup cannot break
+60.** Not because the context is weak — the context is the best thing in the
+directory so far — but because a zero on Portability and a one on Access Surface
+are unrecoverable from anywhere else. The Context Gate never even comes into
+play.
+
+### The mirror
+
+Set against the router setup scored at 60:
+
+| | Friend | Sam |
+|---|---|---|
+| Context | 50 | **75** |
+| Flexibility | **91** | 25 |
+| Scalability | 34 | TBD |
+
+Near-perfect photo negatives. He built excellent plumbing and it's unclear
+whether anything good flows through it. This setup has the best content in the
+directory, reachable from one machine, through one vendor, with no fallback.
+
+## The best idea in here
+The **coaching arm** — context that teaches the team how to evaluate ideas, not
+just what the company sells. Almost nobody encodes method. It's also the piece
+that generalizes: it would keep working after a vendor swap.
+
+Runner-up: global + per-squad scoping. That's the L3 context anchor implemented
+at organizational scale, which is a harder problem than the personal version most
+setups solve.
+
+## The weakest link
+**Concentration risk.** Not personal inconvenience — a business continuity gap.
+An org-wide system serving multiple product squads, at an AI healthcare company,
+with no configured alternative and no exercised fallback. A provider outage or a
+price change stops several teams, not one person.
+
+The cheapest fix in the whole directory is here: the context is already in
+portable markdown, so an exercised fallback is a config change and an afternoon,
+and it moves Portability from 0 to 2–3. That's up to 11 points — more than any
+other single change available.
+
+## Open items
+Q12 (outputs), Q13–14 (reliability), Q15–17 (governance), Q18–19 (upkeep).
+
+Q15 is the one to answer carefully. PHI/PII rules at an AI healthcare company are
+both the highest-stakes item on the list and the credential this whole project
+rests on.
 
 ## Safety note
-
-Before publishing your own entry, strip anything that reveals your employer's
-internal tooling, vendor relationships, or data-handling specifics beyond what's
-already public. "I keep PHI out of consumer models" is fine. Naming your
-company's approved-vendor list is not yours to publish.
+Before publishing, strip anything that reveals employer internal tooling, vendor
+relationships, or data-handling specifics beyond what's already public. "I keep
+PHI out of consumer models" is fine. Naming an approved-vendor list is not.
