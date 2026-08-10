@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://o100mrr.dev/schemas/setup.schema.json",
+  "title": "AI Setup Entry",
+  "description": "One documented personal AI setup, scored with FLEX-7. Mirrors the frontmatter in docs/setups/*.md so the markdown files can be the seed data for the app.",
+  "type": "object",
+  "required": ["slug", "name", "role", "archetype", "rubric_version", "scores", "consent"],
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "role": { "type": "string" },
+    "industry": { "type": "string" },
+    "archetype": {
+      "type": "string",
+      "enum": ["router", "layered-context", "voice-ambient", "delegation", "automation-pipeline", "minimalist"]
+    },
+    "rubric_version": { "type": "string" },
+    "scored_on": { "type": "string", "format": "date" },
+    "scored_by": { "type": "string" },
+
+    "layers": {
+      "type": "object",
+      "description": "The five-layer decomposition from docs/research/00-landscape.md.",
+      "properties": {
+        "context":  { "$ref": "#/$defs/layer" },
+        "models":   { "$ref": "#/$defs/layer" },
+        "harness":  { "$ref": "#/$defs/layer" },
+        "surface":  { "$ref": "#/$defs/layer" },
+        "memory":   { "$ref": "#/$defs/layer" }
+      }
+    },
+
+    "scores": {
+      "type": "object",
+      "required": ["context_depth", "portability", "interoperability", "automation", "access_surface", "reliability", "governance"],
+      "additionalProperties": false,
+      "properties": {
+        "context_depth":    { "$ref": "#/$defs/level" },
+        "portability":      { "$ref": "#/$defs/level" },
+        "interoperability": { "$ref": "#/$defs/level" },
+        "automation":       { "$ref": "#/$defs/level" },
+        "access_surface":   { "$ref": "#/$defs/level" },
+        "reliability":      { "$ref": "#/$defs/level" },
+        "governance":       { "$ref": "#/$defs/level" }
+      }
+    },
+
+    "evidence": {
+      "type": "object",
+      "description": "Per-dimension justification. A dimension with no evidence string must not exceed level 2.",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "unverified": {
+      "type": "array",
+      "description": "Dimension keys that were inferred rather than demonstrated.",
+      "items": { "type": "string" }
+    },
+
+    "upkeep": {
+      "type": "object",
+      "properties": {
+        "maintenance_load": { "type": "string", "enum": ["low", "medium", "high"] },
+        "time_to_value":    { "type": "string", "enum": ["same-day", "week", "month-plus"] },
+        "monthly_cost_usd": { "type": ["number", "null"], "minimum": 0 }
+      }
+    },
+
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "layer"],
+        "properties": {
+          "name":  { "type": "string" },
+          "layer": { "type": "string", "enum": ["context", "models", "harness", "surface", "memory"] },
+          "url":   { "type": "string", "format": "uri" }
+        }
+      }
+    },
+
+    "source":  { "type": "string" },
+    "consent": { "type": "string", "enum": ["public", "anonymized", "private"] },
+    "content": {
+      "type": "object",
+      "description": "Content-machine tracking. Which episodes this setup has produced.",
+      "properties": {
+        "published_urls": { "type": "array", "items": { "type": "string", "format": "uri" } },
+        "hook": { "type": "string" }
+      }
+    }
+  },
+
+  "$defs": {
+    "level": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 4,
+      "description": "0 Absent, 1 Ad hoc, 2 Repeatable, 3 Systematized, 4 Compounding"
+    },
+    "layer": {
+      "type": "object",
+      "properties": {
+        "summary": { "type": "string" },
+        "tools":   { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
