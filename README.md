@@ -15,6 +15,8 @@ background just gets you to the wrong answer faster, in more places.
 | [`docs/research/01-flex7-rubric.md`](docs/research/01-flex7-rubric.md) | **FLEX-7** — the scoring rubric, anchors, weights, and a worked example |
 | [`docs/product/next-steps.md`](docs/product/next-steps.md) | The plan: calibrate → content → corpus → app |
 | [`docs/setups/`](docs/setups/) | Scored setups. `_TEMPLATE.md` to add one |
+| [`docs/content/stack-check-series.md`](docs/content/stack-check-series.md) | **Stack Check** : the 10 episode TikTok series |
+| [`docs/content/hook-library.md`](docs/content/hook-library.md) | 60 categorized hooks, referenced by episode |
 | [`data/setup.schema.json`](data/setup.schema.json) | Data model — markdown frontmatter is the source of truth |
 
 ## FLEX-7 at a glance
