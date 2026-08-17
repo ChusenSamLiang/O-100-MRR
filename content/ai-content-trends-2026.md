@@ -98,7 +98,49 @@ Pattern: every working framing has at least one of a number, a consequence, a na
 
 ---
 
-## 6. 30-day test
+## 6. Going candid without losing retention
+
+Candid is the right instinct and it matches the authenticity counter-trend, but the numbers come with a warning. Scripted video retains at roughly 40 to 60%, unscripted at 25 to 35%, and most of that gap opens in the first 30 seconds. Raw content reads as credible precisely because it is less filtered, and then dies on dead air, circular answers and missing context.
+
+So the move is not "stop scripting." It is drop the performance, keep the structure.
+
+### The three-beat note, not a script
+
+Write three things on a note before you hit record. Nothing else.
+
+1. **The opening line, verbatim.** The only sentence you memorize. It carries the whole retention curve.
+2. **Two or three beats you want to hit.** Bullets, not sentences.
+3. **The closing conviction, verbatim.** No question, per the voice profile.
+
+Everything between beat one and beat three is live. That preserves the candid texture where it matters, in the middle, and protects the two moments where rambling actually costs views.
+
+### Capture rules
+
+- Record while doing the thing, not after. The reaction when something works or breaks is unrepeatable and un-fakeable, and it is the exact scarcity in an AI-slop feed.
+- Keep a capture running during real work. Screen recording with live commentary, phone on the desk, voice memo on the platform. Harvest clips, do not stage them.
+- Subway Build already is this format. The commute, the noise, the dead zone past 14th Street are the candid signal. Stop cleaning it up.
+- One take with a hard constraint is itself a format promise, but only publish the takes that hold.
+
+### Edit hard, this is where candid wins or loses
+
+- Your published first frame should be roughly the eighth second of what you recorded. Cut the ramp-in.
+- Never open on your face saying "so." Open on the artifact, the screen, the error, or the number.
+- Cut every circular restatement. Candid earns you texture, not runtime.
+- Good editing keeps the honesty and removes the friction. That is the whole job.
+
+### Where candid fits, and where it does not
+
+| Lane | Candid? |
+|---|---|
+| A. Consequence, AI x jobs x money | Yes. Conviction reads as fake when it is performed. |
+| B. Search utility | No. Keyword-first packaging needs tight control. Keep these structured. |
+| C. Subway Build | Yes. The constraint is the script. |
+| D. Receipts and failures | Yes. This is the strongest candid fit on the channel. |
+| E. News reaction | Yes, and speed matters more than polish here. |
+
+---
+
+## 7. 30-day test
 
 Nine videos, three lanes, three each. Hold the format constant so the topic is the only variable.
 
@@ -121,3 +163,6 @@ Measure at day 30 on median views and average completion, not on the single best
 - TikTok trends August 2026: https://newengen.com/insights/august-tiktok-trends/
 - 2026 content creator trend shifts: https://www.bigo.tv/blog/content-creator-trends
 - Sprout Social 2026 social media trends: https://sproutsocial.com/insights/social-media-trends/
+- Scripted vs unscripted retention benchmarks: https://swarmify.com/blog/script-writing/
+- Talking head video craft, raw vs scripted trade-offs: https://www.distribution.ai/blog/talking-head-videos
+- Short form video trends for founders: https://prodshort.com/blog/short-form-video-trends
